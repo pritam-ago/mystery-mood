@@ -210,6 +210,91 @@ body {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
 }
 
+/* Movies Section Styles */
+.movies {
+    padding: 40px 20px; /* Padding for top and bottom */
+    background-color: #f0f0f0; /* Light background for contrast */
+    text-align: center; /* Center align text */
+    border-top: 2px solid #ff4081; /* Top border for separation */
+}
+
+.movies h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    color: #ff4081; /* Bright color for the heading */
+}
+
+.movie-list {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center align items */
+    gap: 10px; /* Space between movie items */
+}
+
+.movie-list div {
+    background-color: #ffffff; /* White background for movie items */
+    padding: 15px; /* Padding inside each movie item */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: transform 0.3s ease; /* Animation on hover */
+    width: 80%; /* Width for movie items */
+    max-width: 400px; /* Maximum width for better appearance */
+}
+
+/* Hover effect for movie items */
+.movie-list div:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Movie Reviews Section Styles */
+.movie-reviews {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f0f0f0; /* Light background for contrast */
+}
+
+.movie-reviews h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.movie-suggestions h2 {
+    text-align: center; /* Centers the title */
+    margin-bottom: 20px; /* Optional: Add some space below the title */
+}
+
+
+
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align reviews */
+    gap: 20px; /* Space between reviews */
+}
+
+.review {
+    background-color: #ffffff; /* White background for reviews */
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px; /* Limit width for better appearance */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Animation on hover */
+}
+
+/* Hover effect for review cards */
+.review:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.review h3 {
+    margin: 0;
+    color: #ff4081; /* Bright color for review titles */
+}
+
+.review p {
+    color: #555; /* Darker color for descriptions */
+}
+
 
 @keyframes fadeIn {
     from {

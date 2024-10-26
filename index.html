@@ -25,7 +25,38 @@
             <button class="pause">Pause Music</button>
         </div>
     </section>
+<!-- New Movies Based on Your Mood Section -->
+    <section class="movies" style="display: none;">
+        <h2>Movies Based on Your Mood</h2>
+        <div class="movie-list"></div>
+    </section>
 
+    <!-- Movie Suggestions Section -->
+    <section class="movie-suggestions" style="display: none;">
+        <h2>Movie Suggestions Based on Your Mood</h2>
+        <div class="review-container">
+            <div class="review" data-mood="Happy" style="display: none;">
+                <h3>Happy Mood</h3>
+                <p>1. <strong>The Intouchables</strong> - A heartwarming story of friendship that will uplift your spirits!</p>
+                <p>2. <strong>La La Land</strong> - A vibrant musical that celebrates love and ambition.</p>
+            </div>
+            <div class="review" data-mood="Calm" style="display: none;">
+                <h3>Calm Mood</h3>
+                <p>1. <strong>Into the Wild</strong> - A breathtaking journey through nature that encourages introspection.</p>
+                <p>2. <strong>The Secret Life of Walter Mitty</strong> - An adventure that inspires you to embrace life.</p>
+            </div>
+            <div class="review" data-mood="Sad" style="display: none;">
+                <h3>Sad Mood</h3>
+                <p>1. <strong>Her</strong> - A poignant tale of love and loneliness in a digital age.</p>
+                <p>2. <strong>Schindler's List</strong> - A powerful and emotional film about humanity and sacrifice.</p>
+            </div>
+            <div class="review" data-mood="Energized" style="display: none;">
+                <h3>Energized Mood</h3>
+                <p>1. <strong>Mad Max: Fury Road</strong> - A high-octane action film that keeps you on the edge of your seat!</p>
+                <p>2. <strong>John Wick</strong> - An adrenaline-pumping ride with stunning visuals and choreography.</p>
+            </div>
+        </div>
+    </section>
     <section class="how-it-works">
         <div class="steps">
             <div class="step">
@@ -34,7 +65,7 @@
             </div>
             <div class="step">
                 <h3>2. Explore Recommendations</h3>
-                <p>Receive personalized music and content based on your selection.</p>
+                <p>Receive personalized music and movie content based on your selection.</p>
             </div>
             <div class="step">
                 <h3>3. Enjoy the Experience</h3>
@@ -43,15 +74,7 @@
         </div>
     </section>
 
-    <section class="gallery">
-        <h2>Explore Moods</h2>
-        <div class="gallery-images">
-            <img src="happy.jpg" alt="Happy Mood">
-            <img src="calm.jpg" alt="Calm Mood">
-            <img src="sad.jpg" alt="Sad Mood">
-            <img src="energized.jpg" alt="Energized Mood"> <!-- Added fourth image -->
-        </div>
-    </section>
+    
 
     <section class="cta">
         <h2>Get Started</h2>
@@ -74,7 +97,6 @@
         function handleMoodSelection(mood) {
             let bgColor, audioId;
 
-            // Define colors and audio for each mood
             switch (mood) {
                 case 'Happy':
                     bgColor = '#ffeb3b'; // Bright Yellow
@@ -113,6 +135,19 @@
             // Play corresponding audio
             const audioToPlay = document.getElementById(audioId);
             audioToPlay.play();
+
+            // Show movie suggestions section
+            document.querySelector('.movie-suggestions').style.display = 'block';
+
+            // Show the corresponding movie suggestions
+            document.querySelectorAll('.review').forEach(review => {
+                review.style.display = 'none'; // Hide all reviews
+            });
+
+            const currentMoodReview = document.querySelector(`.review[data-mood="${mood}"]`);
+            if (currentMoodReview) {
+                currentMoodReview.style.display = 'block'; // Show only the current mood review
+            }
         }
 
         // Function to pause the currently playing music
