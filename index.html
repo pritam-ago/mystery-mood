@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>Mystery Mood</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Mystery Mood</div>
+    </header>
+
+    <section class="hero">
+        <h1>Find Your Mood</h1>
+        <p>Select a mood and let us create an experience for you.</p>
+        <div class="mood-selector">
+            <button class="happy">Happy</button>
+            <button class="calm">Calm</button>
+            <button class="sad">Sad</button>
+            <button class="energized">Energized</button>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="steps">
+            <div class="step">
+                <h3>1. Choose Your Mood</h3>
+                <p>Select your mood from the options provided above.</p>
+            </div>
+            <div class="step">
+                <h3>2. Explore Recommendations</h3>
+                <p>Receive personalized music and content based on your selection.</p>
+            </div>
+            <div class="step">
+                <h3>3. Enjoy the Experience</h3>
+                <p>Immerse yourself in the curated experience tailored to you.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2>Explore Moods</h2>
+        <div class="gallery-images">
+            <img src="happy.jpg" alt="Happy Mood">
+            <img src="calm.jpg" alt="Calm Mood">
+            <img src="sad.jpg" alt="Sad Mood">
+            <img src="energized.jpg" alt="Energized Mood"> <!-- Added fourth image -->
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Get Started</h2>
+        <p>Let’s find your perfect mood!</p>
+        <a class="cta-button" href="#">Start Now</a>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Mystery Mood. All rights reserved.</p>
+    </footer>
+
+    <!-- Audio elements for each mood -->
+    <audio id="happy-audio" src="happy.mp3"></audio>
+    <audio id="calm-audio" src="calm.mp3"></audio>
+    <audio id="sad-audio" src="sad.mp3"></audio>
+    <audio id="energized-audio" src="energized.mp3"></audio>
+
+    <script>
+        // Function to handle mood selection
+        function handleMoodSelection(mood) {
+            let bgColor, audioId;
+
+            // Define colors and audio for each mood
+            switch (mood) {
+                case 'Happy':
+                    bgColor = '#ffeb3b'; // Bright Yellow
+                    audioId = 'happy-audio';
+                    break;
+                case 'Calm':
+                    bgColor = '#64b5f6'; // Soft Blue
+                    audioId = 'calm-audio';
+                    break;
+                case 'Sad':
+                    bgColor = '#90caf9'; // Light Blue
+                    audioId = 'sad-audio';
+                    break;
+                case 'Energized':
+                    bgColor = '#ff7043'; // Coral
+                    audioId = 'energized-audio';
+                    break;
+                default:
+                    bgColor = '#ffffff'; // Default white
+            }
+
+            // Change background color of hero section
+            const heroSection = document.querySelector('.hero');
+            if (heroSection) {
+                heroSection.style.backgroundColor = bgColor;
+            }
+
+            // Stop all audio tracks before playing the selected one
+            const audios = ['happy-audio', 'calm-audio', 'sad-audio', 'energized-audio'];
+            audios.forEach(id => {
+                const audio = document.getElementById(id);
+                audio.pause();
+                audio.currentTime = 0; // Reset audio to start
+            });
+
+            // Play corresponding audio
+            const audioToPlay = document.getElementById(audioId);
+            audioToPlay.play();
+        }
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Enables smooth scrolling
+            });
+        }
+
+        // Add event listeners to buttons
+        document.querySelector('.happy').addEventListener('click', function() {
+            handleMoodSelection("Happy");
+        });
+        document.querySelector('.calm').addEventListener('click', function() {
+            handleMoodSelection("Calm");
+        });
+        document.querySelector('.sad').addEventListener('click', function() {
+            handleMoodSelection("Sad");
+        });
+        document.querySelector('.energized').addEventListener('click', function() {
+            handleMoodSelection("Energized");
+        });
+
+        // Add event listener to the "Start Now" button
+        document.querySelector('.cta-button').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            scrollToTop(); // Call the scroll function
+        });
+    </script>
+</body>
+</html>
