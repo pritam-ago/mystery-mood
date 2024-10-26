@@ -25,11 +25,7 @@
             <button class="pause">Pause Music</button>
         </div>
     </section>
-<!-- New Movies Based on Your Mood Section -->
-    <section class="movies" style="display: none;">
-        <h2>Movies Based on Your Mood</h2>
-        <div class="movie-list"></div>
-    </section>
+
 
     <!-- Movie Suggestions Section -->
     <section class="movie-suggestions" style="display: none;">
@@ -57,6 +53,30 @@
             </div>
         </div>
     </section>
+
+     <!-- Playlist Suggestions Section -->
+     <section class="playlist-suggestions" style="display: none;">
+        <h2>Playlist Suggestions Based on Your Mood</h2>
+        <div class="playlist-container">
+            <div class="playlist" data-mood="Happy" style="display: none;">
+                <a href="https://open.spotify.com/playlist/37i9dQZF1EIgG2NEOhqsD7?si=83c2de7be5d6436e" target="_blank">Happy Vibes Playlist</a>
+                <a href="https://open.spotify.com/playlist/0jrlHA5UmxRxJjoykf7qRY?si=5459323746904bc5" target="_blank">Feel Good Indie</a>
+            </div>
+            <div class="playlist" data-mood="Calm" style="display: none;">
+                <a href="https://open.spotify.com/playlist/37i9dQZF1EIfTmpqlGn32s?si=127f72a003da4963" target="_blank">Peaceful Piano</a>
+                <a href="https://open.spotify.com/playlist/0cj48sijCRDJ3Hatx1k1vJ?si=15d2bcd2625341d0" target="_blank">Chill Vibes</a>
+            </div>
+            <div class="playlist" data-mood="Sad" style="display: none;">
+                <a href="https://open.spotify.com/playlist/4bRQf8bwAIVgCb6Lcoursx?si=3e0495291c2d4b51" target="_blank">Sad Songs</a>
+                <a href="https://open.spotify.com/playlist/6vEYfoIeIIzC87k94JDcYj?si=20a0357a5050484e" target="_blank">Heartbreak</a>
+            </div>
+            <div class="playlist" data-mood="Energized" style="display: none;">
+                <a href="https://open.spotify.com/playlist/37i9dQZF1EIeEZPgsd7pko?si=45ea148980d445af" target="_blank">Power Workout</a>
+                <a href="https://open.spotify.com/playlist/3WYmyXrEqRL1UnV3ep13ie?si=b755faa78fb24daa" target="_blank">Rock Classics</a>
+            </div>
+        </div>
+    </section>
+
     <section class="how-it-works">
         <div class="steps">
             <div class="step">
@@ -148,6 +168,19 @@
             if (currentMoodReview) {
                 currentMoodReview.style.display = 'block'; // Show only the current mood review
             }
+            // Show playlist suggestions section
+            document.querySelector('.playlist-suggestions').style.display = 'block';
+
+            // Show the corresponding playlist suggestions
+            document.querySelectorAll('.playlist').forEach(playlist => {
+                playlist.style.display = 'none'; // Hide all playlists
+            });
+
+            const currentMoodPlaylist = document.querySelector(`.playlist[data-mood="${mood}"]`);
+            if (currentMoodPlaylist) {
+                currentMoodPlaylist.style.display = 'block'; // Show only the current mood playlist
+            }
+        
         }
 
         // Function to pause the currently playing music
@@ -167,8 +200,10 @@
                 behavior: 'smooth' // Enables smooth scrolling
             });
         }
-
+        
+    
         // Add event listeners to buttons
+        
         document.querySelector('.happy').addEventListener('click', function() {
             handleMoodSelection("Happy");
         });
