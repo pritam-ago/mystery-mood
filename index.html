@@ -20,6 +20,10 @@
             <button class="sad">Sad</button>
             <button class="energized">Energized</button>
         </div>
+        <!-- New Pause Button -->
+        <div class="pause-button-container">
+            <button class="pause">Pause Music</button>
+        </div>
     </section>
 
     <section class="how-it-works">
@@ -111,6 +115,16 @@
             audioToPlay.play();
         }
 
+        // Function to pause the currently playing music
+        function pauseMusic() {
+            const audios = ['happy-audio', 'calm-audio', 'sad-audio', 'energized-audio'];
+            audios.forEach(id => {
+                const audio = document.getElementById(id);
+                audio.pause(); // Pause audio
+                audio.currentTime = 0; // Optionally reset to start
+            });
+        }
+
         // Scroll to top function
         function scrollToTop() {
             window.scrollTo({
@@ -131,6 +145,11 @@
         });
         document.querySelector('.energized').addEventListener('click', function() {
             handleMoodSelection("Energized");
+        });
+
+        // Add event listener to the pause button
+        document.querySelector('.pause').addEventListener('click', function() {
+            pauseMusic(); // Call the pause function
         });
 
         // Add event listener to the "Start Now" button

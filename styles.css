@@ -188,6 +188,28 @@ body {
     background-color: #333; /* Dark footer */
     color: white; /* White text */
 }
+/* Pause Button Styles */
+.pause-button-container {
+    margin-top: 20px; /* Space above the button */
+}
+
+.pause {
+    padding: 12px 24px; /* Same padding as mood buttons */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Button shadow */
+    background: linear-gradient(135deg, #ff4081, #e91e63); /* Bright gradient */
+}
+
+/* Hover effect for pause button */
+.pause:hover {
+    transform: translateY(-4px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
 
 @keyframes fadeIn {
     from {
