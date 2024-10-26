@@ -12,6 +12,7 @@
     </header>
 
     <section class="hero">
+        
         <h1>Find Your Mood</h1>
         <p>Select a mood and let us create an experience for you.</p>
         <div class="mood-selector">
@@ -24,61 +25,81 @@
         <div class="pause-button-container">
             <button class="pause">Pause Music</button>
         </div>
+        
     </section>
 
 
     <!-- Movie Suggestions Section -->
-    <section class="movie-suggestions" style="display: none;">
-        <h2>Movie Suggestions Based on Your Mood</h2>
-        <div class="review-container">
-            <div class="review" data-mood="Happy" style="display: none;">
-                <h3>Happy Mood</h3>
-                <p>1. <strong>The Intouchables</strong> - A heartwarming story of friendship that will uplift your spirits!</p>
-                <p>2. <strong>La La Land</strong> - A vibrant musical that celebrates love and ambition.</p>
-            </div>
-            <div class="review" data-mood="Calm" style="display: none;">
-                <h3>Calm Mood</h3>
-                <p>1. <strong>Into the Wild</strong> - A breathtaking journey through nature that encourages introspection.</p>
-                <p>2. <strong>The Secret Life of Walter Mitty</strong> - An adventure that inspires you to embrace life.</p>
-            </div>
-            <div class="review" data-mood="Sad" style="display: none;">
-                <h3>Sad Mood</h3>
-                <p>1. <strong>Her</strong> - A poignant tale of love and loneliness in a digital age.</p>
-                <p>2. <strong>Schindler's List</strong> - A powerful and emotional film about humanity and sacrifice.</p>
-            </div>
-            <div class="review" data-mood="Energized" style="display: none;">
-                <h3>Energized Mood</h3>
-                <p>1. <strong>Mad Max: Fury Road</strong> - A high-octane action film that keeps you on the edge of your seat!</p>
-                <p>2. <strong>John Wick</strong> - An adrenaline-pumping ride with stunning visuals and choreography.</p>
-            </div>
+<section class="movie-suggestions" style="display: none;">
+    <h2>Movie Suggestions Based on Your Mood</h2>
+    <div class="review-container">
+        <div class="review" data-mood="Happy" style="display: none;">
+            <h3>Happy Mood</h3>
+            <p>1. <strong>The Intouchables</strong> - A heartwarming story of friendship that will uplift your spirits!</p>
+            <img src="https://static.tvtropes.org/pmwiki/pub/images/image_0482.jpeg"  />
+            <p>2. <strong>La La Land</strong> - A vibrant musical that celebrates love and ambition.</p>
+            <img src="https://resizing.flixster.com/zNPeoE45iOdRndAq0ezZPXb1dEY=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p12386480_p_v10_aj.jpg" />
         </div>
-    </section>
+        <div class="review" data-mood="Calm" style="display: none;">
+            <h3>Calm Mood</h3>
+            
+            <p>1. <strong>Into the Wild</strong> - A breathtaking journey through nature that encourages introspection.</p>
+            <img src="https://m.media-amazon.com/images/S/pv-target-images/e0e27ea5a13ca436a17dcbe09d0bd39d50e3a8e71f4c5f674996d9aaaafbd3d4.jpg" />
+            
+            <p>2. <strong>The Secret Life of Walter Mitty</strong> - An adventure that inspires you to embrace life.</p>
+            <img src="https://play-lh.googleusercontent.com/MTjQd0kyN50cvGs9NaT57lRY7usIZhR1CbWKgw2Nv48Wa2DSA3AYgCBykM67K-nmTWYd"/>
+        </div>
+        <div class="review" data-mood="Sad" style="display: none;">
+            <h3>Sad Mood</h3>
+            
+            <p>1. <strong>Her</strong> - A poignant tale of love and loneliness in a digital age.</p>
+            <img src="https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_QL75_UX190_CR0,0,190,281_.jpg"/>
+            
+            <p>2. <strong>Schindler's List</strong> - A powerful and emotional film about humanity and sacrifice.</p>
+            <img src="https://m.media-amazon.com/images/I/81+H4lZVw+L._AC_UF1000,1000_QL80_.jpg"/>
+        </div>
+        <div class="review" data-mood="Energized" style="display: none;">
+            <h3>Energized Mood</h3>
+            <p>1. <strong>Mad Max: Fury Road</strong> - A high-octane action film that keeps you on the edge of your seat!</p>
+            <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10854488_p_v8_ac.jpg" />
+            <p>2. <strong>John Wick</strong> - An adrenaline-pumping ride with stunning visuals and choreography.</p>
+            <img src="https://static.wikia.nocookie.net/john-wick8561/images/d/d5/JW1_final_poster_release.jpg/revision/latest?cb=20231215021818"/>
+        </div>
+    </div>
+</section>
 
-     <!-- Playlist Suggestions Section -->
-     <section class="playlist-suggestions" style="display: none;">
-        <h2>Playlist Suggestions Based on Your Mood</h2>
-        <div class="playlist-container">
-            <div class="playlist" data-mood="Happy" style="display: none;">
-                <a href="https://open.spotify.com/playlist/37i9dQZF1EIgG2NEOhqsD7?si=83c2de7be5d6436e" target="_blank">Happy Vibes Playlist</a>
-                <a href="https://open.spotify.com/playlist/0jrlHA5UmxRxJjoykf7qRY?si=5459323746904bc5" target="_blank">Feel Good Indie</a>
-            </div>
-            <div class="playlist" data-mood="Calm" style="display: none;">
-                <a href="https://open.spotify.com/playlist/37i9dQZF1EIfTmpqlGn32s?si=127f72a003da4963" target="_blank">Peaceful Piano</a>
-                <a href="https://open.spotify.com/playlist/0cj48sijCRDJ3Hatx1k1vJ?si=15d2bcd2625341d0" target="_blank">Chill Vibes</a>
-            </div>
-            <div class="playlist" data-mood="Sad" style="display: none;">
-                <a href="https://open.spotify.com/playlist/4bRQf8bwAIVgCb6Lcoursx?si=3e0495291c2d4b51" target="_blank">Sad Songs</a>
-                <a href="https://open.spotify.com/playlist/6vEYfoIeIIzC87k94JDcYj?si=20a0357a5050484e" target="_blank">Heartbreak</a>
-            </div>
-            <div class="playlist" data-mood="Energized" style="display: none;">
-                <a href="https://open.spotify.com/playlist/37i9dQZF1EIeEZPgsd7pko?si=45ea148980d445af" target="_blank">Power Workout</a>
-                <a href="https://open.spotify.com/playlist/3WYmyXrEqRL1UnV3ep13ie?si=b755faa78fb24daa" target="_blank">Rock Classics</a>
-            </div>
+<!-- Playlist Suggestions Section -->
+<section class="playlist-suggestions" style="display: none;">
+    <h2>Playlist Suggestions Based on Your Mood</h2>
+    <div class="playlist-container">
+        <div class="playlist" data-mood="Happy" style="display: none;">
+            <h3>Happy Playlists</h3>
+            <a href="https://open.spotify.com/playlist/37i9dQZF1EIgG2NEOhqsD7?si=83c2de7be5d6436e" target="_blank">Happy Vibes Playlist</a>
+            <a href="https://open.spotify.com/playlist/0jrlHA5UmxRxJjoykf7qRY?si=5459323746904bc5" target="_blank">Feel Good Indie</a>
         </div>
-    </section>
+        <div class="playlist" data-mood="Calm" style="display: none;">
+            <h3>Calm Playlists</h3>
+            <a href="https://open.spotify.com/playlist/37i9dQZF1EIfTmpqlGn32s?si=127f72a003da4963" target="_blank">Peaceful Piano</a>
+            <a href="https://open.spotify.com/playlist/0cj48sijCRDJ3Hatx1k1vJ?si=15d2bcd2625341d0" target="_blank">Chill Vibes</a>
+        </div>
+        <div class="playlist" data-mood="Sad" style="display: none;">
+            <h3>Sad Playlists</h3>
+            <a href="https://open.spotify.com/playlist/4bRQf8bwAIVgCb6Lcoursx?si=3e0495291c2d4b51" target="_blank">Sad Songs</a>
+            <a href="https://open.spotify.com/playlist/6vEYfoIeIIzC87k94JDcYj?si=20a0357a5050484e" target="_blank">Heartbreak</a>
+        </div>
+        <div class="playlist" data-mood="Energized" style="display: none;">
+            <h3>Energized Playlists</h3>
+            <a href="https://open.spotify.com/playlist/37i9dQZF1EIeEZPgsd7pko?si=45ea148980d445af" target="_blank">Power Workout</a>
+            <a href="https://open.spotify.com/playlist/3WYmyXrEqRL1UnV3ep13ie?si=b755faa78fb24daa" target="_blank">Rock Classics</a>
+        </div>
+    </div>
+</section>
 
     <section class="how-it-works">
-        <div class="steps">
+       
+        
+        <div class="steps"> 
+            
             <div class="step">
                 <h3>1. Choose Your Mood</h3>
                 <p>Select your mood from the options provided above.</p>
