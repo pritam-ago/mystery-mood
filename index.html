@@ -16,10 +16,10 @@
         <h1>Find Your Mood</h1>
         <p>Select a mood and let us create an experience for you.</p>
         <div class="mood-selector">
-            <button class="happy">Happy</button>
-            <button class="calm">Calm</button>
-            <button class="sad">Sad</button>
-            <button class="energized">Energized</button>
+            <button class="happy" onclick="updateCarousel('happy')">Happy</button>
+            <button class="calm" onclick="updateCarousel('calm')">Calm</button>
+            <button class="sad" onclick="updateCarousel('sad')">Sad</button>
+            <button class="energized" onclick="updateCarousel('excited')">Energized</button>
         </div>
         <!-- New Pause Button -->
         <div class="pause-button-container">
@@ -28,7 +28,29 @@
         
     </section>
 
+ <!-- Movie Recommendation Carousel -->
+ <section id="carousel" class="carousel">
+    <div class="carousel-inner">
+      <!-- Movie Items -->
+      <div class="carousel-item active">
+        <img src="https://via.placeholder.com/200x300" alt="Movie 1">
+        <p class="movie-title">Movie 1</p>
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+        <p class="movie-title">Movie 2</p>
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/200x300" alt="Movie 3">
+        <p class="movie-title">Movie 3</p>
+      </div>
+    </div>
+    <!-- Carousel controls -->
+    <button class="carousel-control prev" onclick="prevSlide()">❮</button>
+    <button class="carousel-control next" onclick="nextSlide()">❯</button>
+  </section>
 
+  <script src="script.js"></script>
     <!-- Movie Suggestions Section -->
 <section class="movie-suggestions" style="display: none;">
     <h2>Movie Suggestions Based on Your Mood</h2>
